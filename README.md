@@ -23,11 +23,16 @@ The main features of the project include:
 
 To run the project locally, follow these steps:
 
-Clone the repository: **git clone https://github.com/suraj9083/mfa.git**
-Navigate to the project directory: **cd mfa**
-Install the dependencies: **npm install**
-Start the Angular development server: **ng serve**
-Open your browser and go to **http://localhost:4200/user/login** to access the application.
+1. Clone the repository: **git clone https://github.com/suraj9083/mfa.git**
+ 
+2. Navigate to the project directory: **cd mfa**
+ 
+3. Install the dependencies: **npm install**
+ 
+4. Start the Angular development server: **ng serve**
+ 
+5. Open your browser and go to **http://localhost:4200/user/login** to access the application.
+ 
 Please note that you might need to configure and provide your own Google Authenticator API key or credentials in the project for the OTP generation and verification to work properly.
 
 **Conclusion**
