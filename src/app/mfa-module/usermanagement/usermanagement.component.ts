@@ -42,7 +42,6 @@ export class UsermanagementComponent implements OnInit {
   };
 
   onRegSubmit() {
-    console.log("Register ==.> ", this.regiForm.value);
     let regiDetails: any = this.regiForm.value;
     Object.keys(regiDetails).forEach(key => {
       if (regiDetails[key] == '') {
@@ -50,12 +49,10 @@ export class UsermanagementComponent implements OnInit {
       }
     });
     if (this.isAnyRegiKeyEmpty) {
-      console.log('key is empty', this.isAnyRegiKeyEmpty);
       alert("Empty filed not allowd!!")
       this.isAnyRegiKeyEmpty = false;
     } else {
       if (this.regiForm.value.password == this.regiForm.value.confpassword) {
-        console.log('All keys have a value');
         this.userDetails.forEach(e => {
           if (e.email == this.regiForm.value.email) {
             alert("email is already exists!!");
@@ -82,7 +79,6 @@ export class UsermanagementComponent implements OnInit {
   }
 
   onLogSubmit() {
-    console.log("Login ==.> ", this.loginForm.value);
     let loginDetails: any = this.loginForm.value;
     Object.keys(loginDetails).forEach(key => {
       if (loginDetails[key] == '') {
@@ -90,7 +86,6 @@ export class UsermanagementComponent implements OnInit {
       }
     });
     if (this.isAnyLoginKeyEmpty) {
-      console.log('key is empty', this.isAnyLoginKeyEmpty);
       alert("Empty filed not allowd!!")
       this.isAnyLoginKeyEmpty = false;
     }

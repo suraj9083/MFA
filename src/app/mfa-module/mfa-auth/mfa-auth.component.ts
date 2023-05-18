@@ -20,14 +20,12 @@ export class MfaAuthComponent implements OnInit {
 
   ngOnInit(): void {
     this.service.qr().then((Resp) => {
-      console.log(Resp)
       this.qrImg = Resp.qrCodeUrl
       this.secret = Resp.secret
     });
   }
 
   getVerify() {
-    console.log("Token >>>", this.token.value);
     this.service.veriTOTP(this.token.value).then((Resp: any) => {
       if (Resp.status == "success") {
         alert(Resp.msg);
